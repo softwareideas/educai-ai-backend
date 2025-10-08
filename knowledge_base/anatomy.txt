@@ -1,0 +1,47 @@
+# Human Anatomy Knowledge Base
+
+## Cardiovascular System
+The heart is a four-chambered muscular organ that pumps blood throughout the body. It consists of two atria (upper chambers) and two ventricles (lower chambers). The right side pumps blood to the lungs for oxygenation, while the left side pumps oxygenated blood to the rest of the body.
+
+### Heart Chambers
+- Right Atrium: Receives deoxygenated blood from the body via superior and inferior vena cava
+- Right Ventricle: Pumps blood to the lungs via pulmonary artery
+- Left Atrium: Receives oxygenated blood from the lungs via pulmonary veins
+- Left Ventricle: Pumps blood to the body via aorta
+
+### Heart Valves
+- Tricuspid Valve: Between right atrium and right ventricle
+- Pulmonary Valve: Between right ventricle and pulmonary artery
+- Mitral Valve (Bicuspid): Between left atrium and left ventricle
+- Aortic Valve: Between left ventricle and aorta
+
+## Respiratory System
+The respiratory system includes the nose, pharynx, larynx, trachea, bronchi, and lungs. Its primary function is gas exchange - bringing oxygen into the body and removing carbon dioxide.
+
+### Lung Structure
+- Right Lung: 3 lobes (superior, middle, inferior)
+- Left Lung: 2 lobes (superior, inferior) with cardiac notch
+- Bronchi branch into bronchioles, ending in alveoli where gas exchange occurs
+
+## Nervous System
+The nervous system is divided into central (brain and spinal cord) and peripheral nervous systems. It controls and coordinates all body functions.
+
+### Brain Regions
+- Cerebrum: Largest part, responsible for higher functions
+- Cerebellum: Coordination and balance
+- Brainstem: Connects brain to spinal cord, controls vital functions
+- Diencephalon: Contains thalamus and hypothalamus
+
+## Musculoskeletal System
+The skeletal system provides structure and protection, while muscles enable movement.
+
+### Major Bones
+- Skull: Protects brain
+- Vertebral Column: 33 vertebrae protecting spinal cord
+- Ribs: 12 pairs protecting thoracic organs
+- Long Bones: Femur, humerus, tibia, fibula, radius, ulna
+
+### Muscle Types
+- Skeletal Muscle: Voluntary movement
+- Smooth Muscle: Involuntary, found in organs
+- Cardiac Muscle: Heart muscle, involuntary but striated

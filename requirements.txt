@@ -1,0 +1,28 @@
+# Flask Web Framework
+flask==3.0.0
+flask-cors==4.0.0
+
+# Google Generative AI
+google-generativeai==0.3.2
+
+# Environment Variables
+python-dotenv==1.0.0
+
+# Machine Learning & NLP
+sentence-transformers==5.1.1
+torch>=2.0.0
+transformers>=4.41.0
+
+# Vector Search
+faiss-cpu==1.7.4
+
+# Data Processing
+numpy>=1.24.0
+scikit-learn>=1.3.0
+
+# HTTP Requests (if needed for web search)
+requests>=2.31.0
+
+# Additional dependencies
+tqdm>=4.65.0
+

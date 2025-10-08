@@ -1,0 +1,87 @@
+# Medical Pathology Knowledge Base
+
+## Cellular Injury and Adaptation
+Cells respond to stress through various adaptive mechanisms or progress to injury and death.
+
+### Types of Cellular Adaptation
+- Hypertrophy: Increase in cell size
+- Hyperplasia: Increase in cell number
+- Atrophy: Decrease in cell size
+- Metaplasia: Change in cell type
+- Dysplasia: Abnormal cell growth
+
+### Causes of Cellular Injury
+- Hypoxia: Reduced oxygen supply
+- Chemical agents: Toxins, drugs
+- Physical agents: Trauma, temperature
+- Infectious agents: Bacteria, viruses
+- Immunologic reactions: Autoimmune diseases
+
+## Inflammation
+Inflammation is the body's response to injury or infection.
+
+### Acute Inflammation
+- Vascular changes: Vasodilation, increased permeability
+- Cellular changes: Neutrophil infiltration
+- Chemical mediators: Histamine, prostaglandins, cytokines
+- Cardinal signs: Redness, heat, swelling, pain
+
+### Chronic Inflammation
+- Persistent stimulus
+- Mononuclear cell infiltration
+- Tissue destruction and repair
+- Granuloma formation
+
+## Neoplasia
+Neoplasia refers to abnormal cell growth that may be benign or malignant.
+
+### Characteristics of Cancer Cells
+- Uncontrolled proliferation
+- Loss of differentiation
+- Invasion of surrounding tissue
+- Metastasis to distant sites
+
+### Carcinogenesis
+- Initiation: DNA damage
+- Promotion: Cell proliferation
+- Progression: Malignant transformation
+- Oncogenes and tumor suppressor genes
+
+## Cardiovascular Pathology
+Diseases affecting the heart and blood vessels.
+
+### Atherosclerosis
+- Plaque formation in arterial walls
+- Risk factors: Hypertension, hyperlipidemia, smoking
+- Complications: Myocardial infarction, stroke
+
+### Heart Failure
+- Inability to pump blood effectively
+- Systolic vs diastolic dysfunction
+- Compensatory mechanisms: Hypertrophy, dilation
+
+## Respiratory Pathology
+Diseases affecting the lungs and airways.
+
+### Pneumonia
+- Infection of lung parenchyma
+- Bacterial, viral, fungal causes
+- Consolidation and inflammation
+
+### Chronic Obstructive Pulmonary Disease (COPD)
+- Emphysema: Destruction of alveoli
+- Chronic bronchitis: Airway inflammation
+- Smoking is primary cause
+
+## Renal Pathology
+Diseases affecting the kidneys.
+
+### Glomerulonephritis
+- Inflammation of glomeruli
+- Proteinuria, hematuria
+- Various causes: Immune, infectious
+
+### Acute Kidney Injury
+- Rapid decline in kidney function
+- Prerenal, intrarenal, postrenal causes
+- Oliguria, elevated creatinine

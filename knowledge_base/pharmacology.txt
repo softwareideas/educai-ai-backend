@@ -1,0 +1,94 @@
+# Medical Pharmacology Knowledge Base
+
+## Pharmacokinetics
+The study of how the body affects drugs (absorption, distribution, metabolism, excretion).
+
+### Absorption
+- Route of administration affects absorption
+- Oral: First-pass metabolism in liver
+- Intravenous: Direct entry into circulation
+- Factors: pH, blood flow, surface area
+
+### Distribution
+- Drug binding to plasma proteins
+- Volume of distribution (Vd)
+- Blood-brain barrier penetration
+- Tissue binding and storage
+
+### Metabolism
+- Phase I: Oxidation, reduction, hydrolysis
+- Phase II: Conjugation reactions
+- Cytochrome P450 enzymes
+- Drug interactions affecting metabolism
+
+### Excretion
+- Renal elimination: Glomerular filtration, tubular secretion
+- Hepatic elimination: Bile excretion
+- Half-life: Time for 50% drug elimination
+
+## Pharmacodynamics
+The study of how drugs affect the body (mechanism of action, dose-response).
+
+### Drug Receptors
+- Agonists: Activate receptors
+- Antagonists: Block receptor activation
+- Partial agonists: Partial activation
+- Inverse agonists: Opposite effect
+
+### Dose-Response Relationships
+- Therapeutic index: TD50/ED50
+- Potency: Amount needed for effect
+- Efficacy: Maximum effect achievable
+- Side effects vs therapeutic effects
+
+## Cardiovascular Pharmacology
+
+### Antihypertensive Drugs
+- ACE inhibitors: Block angiotensin conversion
+- Beta-blockers: Block sympathetic stimulation
+- Calcium channel blockers: Block calcium entry
+- Diuretics: Increase sodium excretion
+
+### Antiarrhythmic Drugs
+- Class I: Sodium channel blockers
+- Class II: Beta-blockers
+- Class III: Potassium channel blockers
+- Class IV: Calcium channel blockers
+
+## Antimicrobial Pharmacology
+
+### Antibiotics
+- Penicillins: Cell wall synthesis inhibition
+- Cephalosporins: Similar to penicillins
+- Macrolides: Protein synthesis inhibition
+- Fluoroquinolones: DNA gyrase inhibition
+
+### Antiviral Drugs
+- Acyclovir: Viral DNA polymerase inhibition
+- Oseltamivir: Neuraminidase inhibition
+- Ribavirin: RNA synthesis inhibition
+
+## Central Nervous System Pharmacology
+
+### Anxiolytics and Sedatives
+- Benzodiazepines: GABA receptor enhancement
+- Barbiturates: GABA receptor enhancement
+- Buspirone: Serotonin receptor partial agonist
+
+### Antidepressants
+- SSRIs: Selective serotonin reuptake inhibition
+- TCAs: Tricyclic antidepressants
+- MAOIs: Monoamine oxidase inhibition
+
+## Endocrine Pharmacology
+
+### Diabetes Management
+- Insulin: Glucose uptake promotion
+- Metformin: Decreased hepatic glucose production
+- Sulfonylureas: Insulin secretion stimulation
+- Thiazolidinediones: Insulin sensitivity improvement
+
+### Thyroid Drugs
+- Levothyroxine: Thyroid hormone replacement
+- Methimazole: Thyroid hormone synthesis inhibition
+- Propylthiouracil: Thyroid hormone synthesis inhibition

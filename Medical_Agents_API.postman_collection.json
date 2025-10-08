@@ -1,0 +1,309 @@
+{
+  "info": {
+    "name": "Medical Agents API with RAG",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Collection for testing Medical Agents API with RAG (Retrieval-Augmented Generation) endpoints"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["health"]
+        },
+        "description": "Check if the API is running and healthy with RAG status"
+      }
+    },
+    {
+      "name": "List Agents",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/agents",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["agents"]
+        },
+        "description": "Get list of all available medical agents"
+      }
+    },
+    {
+      "name": "Home",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": [""]
+        },
+        "description": "Get API information and available endpoints"
+      }
+    },
+    {
+      "name": "Ask Single Agent",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"question\": \"What is the mechanism of action of aspirin?\",\n    \"agent\": \"pharmacology\",\n    \"context\": {\n        \"topic\": \"cardiovascular\",\n        \"difficulty\": \"intermediate\"\n    }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/ask",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["ask"]
+        },
+        "description": "Ask a question to a specific medical agent (now with RAG)"
+      }
+    },
+    {
+      "name": "Collaborative Response",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"question\": \"Explain the process of blood clotting from both physiological and biochemical perspectives\",\n    \"context\": {\n        \"topic\": \"hemostasis\",\n        \"difficulty\": \"advanced\"\n    }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/collaborate",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["collaborate"]
+        },
+        "description": "Get collaborative response from multiple relevant agents with RAG"
+      }
+    },
+    {
+      "name": "Get RAG Context",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"question\": \"What is the structure of the heart?\",\n    \"max_tokens\": 1000\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/rag/context",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["rag", "context"]
+        },
+        "description": "Get RAG context for a specific question"
+      }
+    },
+    {
+      "name": "Knowledge Base Statistics",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/knowledge/stats",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["knowledge", "stats"]
+        },
+        "description": "Get statistics about the RAG knowledge base"
+      }
+    },
+    {
+      "name": "Search Knowledge Base",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"query\": \"cardiac cycle\",\n    \"topic\": \"Human Physiology\",\n    \"limit\": 5\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/search",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["search"]
+        },
+        "description": "Search the knowledge base with optional topic filtering"
+      }
+    },
+    {
+      "name": "Anatomy Question",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"question\": \"Describe the structure and function of the cerebellum\",\n    \"agent\": \"anatomy\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/ask",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["ask"]
+        },
+        "description": "Test anatomy agent with a specific question (RAG-enhanced)"
+      }
+    },
+    {
+      "name": "Physiology Question",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"question\": \"Explain the Frank-Starling mechanism in the heart\",\n    \"agent\": \"physiology\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/ask",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["ask"]
+        },
+        "description": "Test physiology agent with a specific question (RAG-enhanced)"
+      }
+    },
+    {
+      "name": "Biochemistry Question",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"question\": \"What is the role of ATP in cellular metabolism?\",\n    \"agent\": \"biochemistry\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/ask",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["ask"]
+        },
+        "description": "Test biochemistry agent with a specific question (RAG-enhanced)"
+      }
+    },
+    {
+      "name": "Pathology Question",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"question\": \"What are the stages of wound healing?\",\n    \"agent\": \"pathology\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/ask",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["ask"]
+        },
+        "description": "Test pathology agent with a specific question (RAG-enhanced)"
+      }
+    },
+    {
+      "name": "Pharmacology Question",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"question\": \"Explain the mechanism of action of beta blockers\",\n    \"agent\": \"pharmacology\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/ask",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["ask"]
+        },
+        "description": "Test pharmacology agent with a specific question (RAG-enhanced)"
+      }
+    },
+    {
+      "name": "Complex Medical Question",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"question\": \"Explain how diabetes affects the cardiovascular system from both physiological and pathological perspectives\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/collaborate",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["collaborate"]
+        },
+        "description": "Test collaborative response with multiple agents and RAG context"
+      }
+    }
+  ]
+}
