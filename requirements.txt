@@ -26,3 +26,6 @@ requests>=2.31.0
 # Additional dependencies
 tqdm>=4.65.0
 
+# Production WSGI server for Cloud Run
+gunicorn==21.2.0
+
