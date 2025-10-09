@@ -87,6 +87,7 @@ pkill -f "python app.py"
    GEMINI_API_KEY=your_api_key_here
    ```
 
+
 3. **Start the server**:
 
    ```bash
