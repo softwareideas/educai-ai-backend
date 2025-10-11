@@ -5,6 +5,11 @@ Prevents harmful, dangerous, or inappropriate responses
 
 import re
 from typing import Dict, Any
+try:
+    from profanity_check import predict as pf_predict, predict_prob as pf_predict_prob
+    _PROFANITY_AVAILABLE = True
+except Exception:
+    _PROFANITY_AVAILABLE = False
 
 class SafetyFilter:
     """Filter to detect and block harmful or dangerous questions"""
@@ -38,6 +43,15 @@ class SafetyFilter:
         
         # Compile patterns
         self.compiled_patterns = [re.compile(pattern, re.IGNORECASE) for pattern in self.harmful_patterns]
+
+        # Sexual explicit instruction patterns (non-educational)
+        self.sexual_explicit_patterns = [
+            r'\b(how to|ways to|methods to|best way to)\s+(have\s+sex|do\s+sex|have\s+intercourse|have\s+sexual\s+intercourse)\b',
+            r'\b(how to|ways to|methods to|best way to)\s+(use|insert|put)\s+penis\s+(in|into|inside)\s+vagin[ae]\b',
+            r'\b(oral\s+sex|anal\s+sex|blowjob|handjob|sex\s+positions?)\b.*\b(how to|guide|tips)\b',
+            r'\b(kamasutra|porn|pornography)\b',
+        ]
+        self.compiled_sexual_patterns = [re.compile(pattern, re.IGNORECASE) for pattern in self.sexual_explicit_patterns]
         
         # Crisis resources
         self.crisis_resources = """
@@ -62,6 +76,18 @@ class SafetyFilter:
         for pattern in self.compiled_patterns:
             if pattern.search(question_lower):
                 return True
+        # Explicit sexual instruction (non-educational)
+        for pattern in self.compiled_sexual_patterns:
+            if pattern.search(question_lower):
+                return True
+        # Profanity check (if available)
+        if _PROFANITY_AVAILABLE:
+            try:
+                score = float(pf_predict_prob([question])[0])
+                if score >= 0.7:
+                    return True
+            except Exception:
+                pass
         
         return False
     
@@ -100,6 +126,11 @@ Please know that difficult feelings can pass, and help is available. You deserve
 
 **If you have a legitimate medical education question, please rephrase it appropriately.**"""
         
+        elif any(p.search(question_lower) for p in self.compiled_sexual_patterns):
+            response = (
+                "I can't provide explicit sexual instructions. If you're looking for educational content, I can share age-appropriate, factual information on topics like reproductive anatomy, consent, contraception, and prevention of STIs. "
+                "If this is a health concern, please speak with a licensed healthcare professional." 
+            )
         else:
             response = """I cannot provide the information you're requesting as it could potentially be harmful or dangerous.
 
@@ -165,6 +196,26 @@ Please know that difficult feelings can pass, and help is available. You deserve
                     'filtered_response': self.get_safe_response(question)['response'],
                     'reason': 'Response contained potentially harmful content'
                 }
+        # Explicit sexual instruction in response
+        for pattern in self.compiled_sexual_patterns:
+            if pattern.search(response_lower):
+                return {
+                    'is_safe': False,
+                    'filtered_response': self.get_safe_response(question)['response'],
+                    'reason': 'Response contained explicit sexual content'
+                }
+        # Profanity check (if available)
+        if _PROFANITY_AVAILABLE:
+            try:
+                score = float(pf_predict_prob([response])[0])
+                if score >= 0.7:
+                    return {
+                        'is_safe': False,
+                        'filtered_response': self.get_safe_response(question)['response'],
+                        'reason': 'Response contained profanity'
+                    }
+            except Exception:
+                pass
         
         return {
             'is_safe': True,

@@ -6,13 +6,14 @@ from typing import List, Dict, Tuple, Optional
 import logging
 import pickle
 import json
+from src.config import KNOWLEDGE_BASE_PATH, EMBEDDING_MODEL_NAME, FAISS_INDEX_FILE, CHUNKS_FILE
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 class MedicalRAG:
-    def __init__(self, knowledge_base_path: str = "knowledge_base", model_name: str = "all-MiniLM-L6-v2"):
+    def __init__(self, knowledge_base_path: str = KNOWLEDGE_BASE_PATH, model_name: str = EMBEDDING_MODEL_NAME, index_file: str = FAISS_INDEX_FILE, chunks_file: str = CHUNKS_FILE):
         """
         Retrieval-Augmented Generation system for medical knowledge
 
@@ -26,8 +27,8 @@ class MedicalRAG:
         self.index = None
         self.chunks = []
         self.chunk_metadata = []
-        self.index_file = "medical_index.faiss"
-        self.chunks_file = "medical_chunks.pkl"
+        self.index_file = index_file
+        self.chunks_file = chunks_file
 
         # Initialize the embedding model
         self._initialize_embedding_model()
@@ -308,3 +309,13 @@ class MedicalRAG:
             "sources": list(set(meta['source'] for meta in self.chunk_metadata)),
             "avg_chunk_length": sum(len(chunk) for chunk in self.chunks) / len(self.chunks) if self.chunks else 0
         }
+
+# Shared singleton accessor to reuse one RAG instance across agents
+_shared_rag: Optional[MedicalRAG] = None
+
+def get_shared_rag() -> MedicalRAG:
+    """Return a shared singleton instance of MedicalRAG."""
+    global _shared_rag
+    if _shared_rag is None:
+        _shared_rag = MedicalRAG()
+    return _shared_rag
