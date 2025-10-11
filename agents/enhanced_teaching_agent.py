@@ -7,8 +7,9 @@ import google.generativeai as genai
 import json
 import logging
 from typing import Dict, List, Optional, Any
-from .rag_system import MedicalRAG
+from .rag_system import get_shared_rag
 from datetime import datetime
+from src.config import GEMINI_FAST_MODEL
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -21,7 +22,7 @@ class EnhancedMedicalTeachingAgent:
         self.agent_id = agent_id
         self.name = name
         self.specialization = specialization
-        self.rag_system = MedicalRAG()
+        self.rag_system = get_shared_rag()
         self.teaching_modes = [
             'explain', 'socratic', 'clinical_case', 'mnemonic', 
             'quiz', 'differential', 'step_by_step', 'neet_focused'
@@ -453,7 +454,7 @@ Make every minute of study count for maximum marks!"""
     def _generate_response(self, prompt: str, mode: str) -> Dict[str, Any]:
         """Generate AI response with error handling"""
         try:
-            model = genai.GenerativeModel('gemini-2.0-flash')
+            model = genai.GenerativeModel(GEMINI_FAST_MODEL)
             response = model.generate_content(prompt)
             
             if response.text:

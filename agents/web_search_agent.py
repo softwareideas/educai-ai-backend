@@ -8,6 +8,7 @@ import requests
 from typing import List, Dict, Any, Optional
 import google.generativeai as genai
 from dotenv import load_dotenv
+from src.config import GEMINI_FAST_MODEL
 
 load_dotenv()
 
@@ -20,7 +21,9 @@ class WebSearchAgent:
         
         if self.gemini_api_key:
             genai.configure(api_key=self.gemini_api_key)
-            self.model = genai.GenerativeModel('gemini-pro')
+            self.model = genai.GenerativeModel(GEMINI_FAST_MODEL)
+        else:
+            self.model = None
     
     def search_web(self, query: str, num_results: int = 5) -> List[Dict[str, Any]]:
         """
@@ -93,6 +96,17 @@ class WebSearchAgent:
                 'confidence': 0.0,
                 'reason': 'No search results to verify against',
                 'reliable_sources': []
+            }
+        if not self.model:
+            # Fallback if model not available
+            return {
+                'verified': False,
+                'status': 'NOT_VERIFIED',
+                'confidence': 0.0,
+                'reliable_sources': [r.get('source') for r in search_results[:3] if r.get('source')],
+                'concerns': 'AI model unavailable for verification',
+                'recommendation': 'Cross-check with reliable medical sources',
+                'source_urls': [r['link'] for r in search_results[:3]]
             }
         
         # Compile evidence from search results
@@ -249,6 +263,8 @@ If there are conflicting information, mention it. Focus on medical accuracy.
 Answer:"""
         
         try:
+            if not self.model:
+                raise RuntimeError('Model unavailable')
             response = self.model.generate_content(prompt)
             return response.text
         except Exception as e:
@@ -273,6 +289,8 @@ AVAILABLE CONTEXT:
 Respond with only one word: SUFFICIENT or INSUFFICIENT"""
         
         try:
+            if not self.model:
+                return False
             response = self.model.generate_content(prompt)
             decision = response.text.strip().upper()
             return 'INSUFFICIENT' in decision
