@@ -1,0 +1,11 @@
+Para‑Clinical Knowledge Index
+
+Subjects: Pathology, Microbiology, Pharmacology, Forensic Medicine, Community Medicine (PSM)
+Use: MBBS 2nd year, NEET advanced topics.
+
+Suggested coverage:
+- Pathology: cellular injury, inflammation, neoplasia, system pathology
+- Microbiology: bacteriology, virology, mycology, parasitology; immunity; lab diagnosis
+- Pharmacology: MOA, indications, dosing, ADRs, interactions
+- Forensic: medico‑legal aspects, injuries, toxicology basics
+- PSM: epidemiology, screening, immunization, programs

@@ -14,7 +14,7 @@ if os.path.exists('medical_chunks.pkl'):
     print("✓ Removed old medical_chunks.pkl")
 
 # Import and rebuild the RAG system
-from agents.rag_system import MedicalRAG
+from educai.agents.rag import MedicalRAG
 
 print("\n🔄 Rebuilding medical knowledge base...")
 print("=" * 60)
