@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-from src.app_factory import create_app
+from educai.app_factory import create_app
 import os
 
 load_dotenv()

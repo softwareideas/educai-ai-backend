@@ -1,0 +1,6 @@
+Pharmacology Overview (Para‑Clinical)
+
+Pillars:
+- Pharmacokinetics (ADME) and Pharmacodynamics (receptors, dose‑response)
+- Drug classes: autonomic, CVS, CNS, antimicrobials, endocrine, anti‑inflammatory, anti‑cancer
+- ADRs, contraindications, interactions; rational prescribing

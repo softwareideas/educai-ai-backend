@@ -1,0 +1,6 @@
+Community Medicine (PSM) Overview
+
+- Epidemiology: measures, study designs, bias
+- Screening: validity, ROC basics, program design
+- Immunization schedules, national health programs, RCH, NCD control
+- Biostatistics: averages, dispersion, tests overview
