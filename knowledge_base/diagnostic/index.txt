@@ -1,7 +1,0 @@
-Diagnostic & Supportive Knowledge Index
-
-- Radiology: CXR/CT/MRI/USG interpretation frameworks
-- Anesthesiology: airway, monitoring, perioperative safety
-- Emergency Medicine: resuscitation, trauma protocols
-- Nuclear Medicine: imaging & therapy basics
-- Lab Medicine: specimen handling, quality, basic panels

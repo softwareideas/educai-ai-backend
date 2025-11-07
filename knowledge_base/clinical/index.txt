@@ -1,8 +1,0 @@
-Clinical Knowledge Index
-
-Scope: Medicine, Surgery, Pediatrics, OBG, Orthopedics, ENT, Ophthalmology, Dermatology, Psychiatry, Pulmonology
-Use: Clinical scenarios; Hx‑Ex‑DDx‑Ix‑Mx approach; guidelines aware.
-
-Pointers:
-- Always start with ABCs in emergencies
-- Red flags and differentials; stepwise investigations; initial & definitive management

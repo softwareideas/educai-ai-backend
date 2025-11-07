@@ -1,9 +1,0 @@
-Pathology Overview (Para‑Clinical)
-
-Core:
-- Cell injury & adaptation, necrosis vs apoptosis
-- Acute & chronic inflammation, wound healing
-- Neoplasia: hallmarks, grading, staging
-- Hemodynamic disorders: edema, thrombosis, embolism, shock
-
-System pathology: CVS, RS, GIT, liver, kidney, endocrine, blood

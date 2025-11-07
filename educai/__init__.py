@@ -1,1 +1,0 @@
-﻿"""educai package"""
